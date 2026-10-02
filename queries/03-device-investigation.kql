@@ -1,0 +1,24 @@
+// Project 4: Microsoft Sentinel SIEM Investigation & Detection
+// Query 03: Device Investigation
+//
+// Purpose:
+// Compare device information associated with the suspicious
+// authentication against the affected user's recent sign-in activity.
+//
+// Investigative Question:
+// Did the suspicious authentication originate from a device normally
+// associated with M. Lopez?
+//
+// Training Note:
+// This project uses synthetic telemetry in a Microsoft Sentinel-style
+// environment for cybersecurity portfolio and training purposes.
+
+SigninLogs
+| where UserPrincipalName == "mlopez@northstarfinancial.com"
+| project
+    TimeGenerated,
+    IPAddress,
+    Location,
+    DeviceDetail,
+    ResultType
+| order by TimeGenerated desc
