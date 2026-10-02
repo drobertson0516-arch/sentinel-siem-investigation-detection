@@ -164,6 +164,33 @@ sentinel-siem-investigation-detection/
 └── report/
     ├── README.md
     └── siem-incident-report.pdf
+```
+
+## Skills Demonstrated
+
+- SIEM alert triage and investigation
+- Microsoft Sentinel concepts
+- Kusto Query Language (KQL) fundamentals
+- Authentication log analysis
+- User baseline analysis
+- Source IP and device investigation
+- Microsoft 365 activity analysis
+- Event correlation
+- Incident scoping and impact assessment
+- Detection engineering
+- False-positive analysis and detection tuning
+- MITRE ATT&CK mapping
+- Incident containment and escalation
+- Technical documentation
+- Evidence-based analytical reasoning
+
+## Key Takeaways
+
+This project demonstrates the importance of investigating beyond the initial SIEM alert. The authentication alert identified suspicious behavior, but correlating identity, device, Microsoft 365, SharePoint, and email-forwarding activity revealed the broader scope and impact of the incident.
+
+The investigation also reinforced the importance of distinguishing between confirmed facts, analytical assessments, and potential risks. Suspicious indicators were not treated as proof individually, and conclusions were limited to what the available evidence supported.
+
+Finally, the project demonstrates how investigation findings can be translated into detection logic. The observed failed-sign-in-followed-by-success pattern was used to design a Microsoft Sentinel-style KQL detection while accounting for contextual indicators and potential false positives.
 
 ## How to Review This Project
 
