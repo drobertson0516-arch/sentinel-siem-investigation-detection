@@ -1,0 +1,24 @@
+// Project 4: Microsoft Sentinel SIEM Investigation & Detection
+// Query 04: External Email Forwarding Analysis
+//
+// Purpose:
+// Identify external forwarding activity associated with the
+// compromised M. Lopez mailbox and summarize messages by destination.
+//
+// Investigative Question:
+// How many messages were forwarded externally, and where were they sent?
+//
+// Training Note:
+// This project uses synthetic telemetry in a Microsoft Sentinel-style
+// environment for cybersecurity portfolio and training purposes.
+
+OfficeActivity
+| where UserId == "mlopez@northstarfinancial.com"
+| where Operation == "ExternalForward"
+| where ForwardingAddress != ""
+| summarize
+    ForwardedMessages = count(),
+    FirstForward = min(TimeGenerated),
+    LastForward = max(TimeGenerated)
+    by ForwardingAddress
+| order by ForwardedMessages desc
