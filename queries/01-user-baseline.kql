@@ -1,0 +1,22 @@
+// Project 4: Microsoft Sentinel SIEM Investigation & Detection
+// Query 01: User Authentication Baseline
+//
+// Purpose:
+// Review recent authentication activity for the affected user to
+// establish normal IP addresses, locations, devices, and sign-in patterns.
+//
+// Training Note:
+// This project uses synthetic telemetry in a Microsoft Sentinel-style
+// environment for cybersecurity portfolio and training purposes.
+
+SigninLogs
+| where UserPrincipalName == "mlopez@northstarfinancial.com"
+| project
+    TimeGenerated,
+    UserPrincipalName,
+    IPAddress,
+    Location,
+    DeviceDetail,
+    AppDisplayName,
+    ResultType
+| order by TimeGenerated desc
