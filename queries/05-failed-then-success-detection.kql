@@ -1,0 +1,53 @@
+// Project 4: Microsoft Sentinel SIEM Investigation & Detection
+// Query 05: Failed Sign-ins Followed by Successful Authentication
+//
+// Purpose:
+// Detect multiple failed authentication attempts against the same
+// user from the same source IP followed by a successful authentication.
+//
+// Detection Logic:
+// - 5 or more failed sign-ins
+// - Same user and source IP
+// - Activity grouped within a 15-minute window
+// - Successful authentication occurs after the failed attempts
+// - Device is unmanaged OR location is unusual
+//
+// Detection Engineering Notes:
+// A threshold of 5 failed attempts was selected as a starting point
+// to balance detection sensitivity with potential false positives.
+// Legitimate travel, approved temporary devices, corporate VPNs,
+// and known network addresses should be considered during alert triage.
+//
+// Training Note:
+// This project uses synthetic telemetry in a Microsoft Sentinel-style
+// environment for cybersecurity portfolio and training purposes.
+
+SigninLogs
+| extend LocationStatus =
+    iff(Location == "Orlando, US", "Normal", "Unusual")
+| extend DeviceStatus =
+    iff(IsManaged == false, "Unmanaged", "Managed")
+| summarize
+    FailedAttempts = countif(ResultType != "0"),
+    SuccessfulAttempts = countif(ResultType == "0"),
+    LastFailedAttempt = maxif(TimeGenerated, ResultType != "0"),
+    FirstSuccessfulAttempt = minif(TimeGenerated, ResultType == "0")
+    by UserPrincipalName,
+       IPAddress,
+       LocationStatus,
+       DeviceStatus,
+       bin(TimeGenerated, 15m)
+| where FailedAttempts >= 5
+| where SuccessfulAttempts >= 1
+| where FirstSuccessfulAttempt > LastFailedAttempt
+| where DeviceStatus == "Unmanaged"
+    or LocationStatus == "Unusual"
+| project
+    UserPrincipalName,
+    IPAddress,
+    FailedAttempts,
+    LastFailedAttempt,
+    FirstSuccessfulAttempt,
+    DeviceStatus,
+    LocationStatus
+| order by FirstSuccessfulAttempt desc
