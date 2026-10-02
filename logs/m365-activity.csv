@@ -1,0 +1,12 @@
+TimeGenerated,UserPrincipalName,Service,Operation,Resource,Details
+2026-10-01 08:46:12,mlopez@northstarfinancial.com,Exchange Online,ServiceAccess,Mailbox,"Microsoft Exchange Online accessed"
+2026-10-01 08:48:31,mlopez@northstarfinancial.com,Exchange Online,MailboxSearch,Mailbox,"Search term: invoice"
+2026-10-01 08:50:07,mlopez@northstarfinancial.com,Exchange Online,MailItemsAccessed,Q3 Vendor Payment Schedule,"Email opened"
+2026-10-01 08:52:16,mlopez@northstarfinancial.com,Exchange Online,FileDownloaded,Vendor_Payment_Schedule_Q3.xlsx,"Attachment downloaded"
+2026-10-01 08:55:22,mlopez@northstarfinancial.com,Exchange Online,MailItemsAccessed,October Payroll Processing,"Email opened"
+2026-10-01 08:57:04,mlopez@northstarfinancial.com,Exchange Online,FileDownloaded,October_Payroll.xlsx,"Attachment downloaded"
+2026-10-01 09:01:18,mlopez@northstarfinancial.com,SharePoint,ServiceAccess,SharePoint,"SharePoint accessed"
+2026-10-01 09:03:42,mlopez@northstarfinancial.com,SharePoint,FolderAccessed,Finance/Accounts Payable,"Finance/Accounts Payable folder accessed"
+2026-10-01 09:06:11,mlopez@northstarfinancial.com,SharePoint,FileDownloaded,Vendor_Banking_Information.xlsx,"File containing vendor banking information downloaded"
+2026-10-01 09:09:27,mlopez@northstarfinancial.com,Exchange Online,New-InboxRule,Mailbox,"External mailbox forwarding rule created"
+2026-10-01 09:12:00,mlopez@northstarfinancial.com,Exchange Online,ActiveSession,Mailbox,"Unauthorized session remained active"
