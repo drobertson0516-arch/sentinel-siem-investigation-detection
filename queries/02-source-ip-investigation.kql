@@ -1,0 +1,25 @@
+// Project 4: Microsoft Sentinel SIEM Investigation & Detection
+// Query 02: Suspicious Source IP Investigation
+//
+// Purpose:
+// Determine whether the suspicious source IP associated with the
+// M. Lopez alert appears in authentication activity for other users.
+//
+// Investigative Question:
+// Is 45.83.64.19 associated with normal Northstar authentication
+// activity, or is it isolated to the affected account?
+//
+// Training Note:
+// This project uses synthetic telemetry in a Microsoft Sentinel-style
+// environment for cybersecurity portfolio and training purposes.
+
+SigninLogs
+| where IPAddress == "45.83.64.19"
+| project
+    TimeGenerated,
+    UserPrincipalName,
+    IPAddress,
+    Location,
+    AppDisplayName,
+    ResultType
+| order by TimeGenerated desc
