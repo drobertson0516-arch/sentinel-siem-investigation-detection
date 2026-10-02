@@ -1,0 +1,7 @@
+TimeGenerated,UserPrincipalName,Operation,Subject,ForwardingAddress,Details
+2026-10-01 08:58:14,mlopez@northstarfinancial.com,ExternalForward,"Vendor invoice notification",payments.review@external-mail.example,"Message forwarded externally"
+2026-10-01 09:01:33,mlopez@northstarfinancial.com,ExternalForward,"Internal meeting reminder",payments.review@external-mail.example,"Message forwarded externally"
+2026-10-01 09:04:27,mlopez@northstarfinancial.com,ExternalForward,"Vendor payment confirmation",payments.review@external-mail.example,"Message forwarded externally"
+2026-10-01 09:07:41,mlopez@northstarfinancial.com,ExternalForward,"Employee benefits announcement",payments.review@external-mail.example,"Message forwarded externally"
+2026-10-01 09:10:19,mlopez@northstarfinancial.com,ExternalForward,"Accounts payable approval request",payments.review@external-mail.example,"Message forwarded externally"
+2026-10-01 09:13:08,mlopez@northstarfinancial.com,ExternalForward,"RE: Updated Banking Instructions",payments.review@external-mail.example,"Vendor bank-change request forwarded externally"
