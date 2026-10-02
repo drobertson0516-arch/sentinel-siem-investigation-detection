@@ -1,0 +1,18 @@
+TimeGenerated,UserPrincipalName,IPAddress,Location,DeviceId,OperatingSystem,IsManaged,AppDisplayName,ResultType
+2026-10-01 08:31:00,mlopez@northstarfinancial.com,45.83.64.19,"Amsterdam, NL",Unknown,Linux,false,Microsoft 365,Failure
+2026-10-01 08:31:42,mlopez@northstarfinancial.com,45.83.64.19,"Amsterdam, NL",Unknown,Linux,false,Microsoft 365,Failure
+2026-10-01 08:32:18,mlopez@northstarfinancial.com,45.83.64.19,"Amsterdam, NL",Unknown,Linux,false,Microsoft 365,Failure
+2026-10-01 08:33:05,mlopez@northstarfinancial.com,45.83.64.19,"Amsterdam, NL",Unknown,Linux,false,Microsoft 365,Failure
+2026-10-01 08:34:11,mlopez@northstarfinancial.com,45.83.64.19,"Amsterdam, NL",Unknown,Linux,false,Microsoft 365,Failure
+2026-10-01 08:35:26,mlopez@northstarfinancial.com,45.83.64.19,"Amsterdam, NL",Unknown,Linux,false,Microsoft 365,Failure
+2026-10-01 08:36:09,mlopez@northstarfinancial.com,45.83.64.19,"Amsterdam, NL",Unknown,Linux,false,Microsoft 365,Failure
+2026-10-01 08:38:14,mlopez@northstarfinancial.com,45.83.64.19,"Amsterdam, NL",Unknown,Linux,false,Microsoft 365,Failure
+2026-10-01 08:40:03,mlopez@northstarfinancial.com,45.83.64.19,"Amsterdam, NL",Unknown,Linux,false,Microsoft 365,Failure
+2026-10-01 08:42:21,mlopez@northstarfinancial.com,45.83.64.19,"Amsterdam, NL",Unknown,Linux,false,Microsoft 365,Failure
+2026-10-01 08:43:37,mlopez@northstarfinancial.com,45.83.64.19,"Amsterdam, NL",Unknown,Linux,false,Microsoft 365,Failure
+2026-10-01 08:44:06,mlopez@northstarfinancial.com,45.83.64.19,"Amsterdam, NL",Unknown,Linux,false,Microsoft 365,Success
+2026-09-30 08:06:00,mlopez@northstarfinancial.com,10.24.18.56,"Orlando, US",NFS-LT-0442,Windows 11,true,Microsoft 365,Success
+2026-09-30 12:13:00,mlopez@northstarfinancial.com,10.24.18.56,"Orlando, US",NFS-LT-0442,Windows 11,true,Microsoft 365,Success
+2026-09-30 15:47:00,mlopez@northstarfinancial.com,10.24.18.56,"Orlando, US",NFS-LT-0442,Windows 11,true,Microsoft 365,Success
+2026-09-29 09:02:00,mlopez@northstarfinancial.com,10.24.18.56,"Orlando, US",NFS-LT-0442,Windows 11,true,Microsoft 365,Success
+2026-09-29 16:21:00,mlopez@northstarfinancial.com,10.24.18.56,"Orlando, US",NFS-LT-0442,Windows 11,true,Microsoft 365,Success
